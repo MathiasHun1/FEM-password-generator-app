@@ -39,7 +39,7 @@ body {
 }
 
 .c-card {
-  color: white;
+  color: var(--clr-gray-900);
   background: var(--clr-gray-300);
   padding: 32px;
   padding-top: 20px;
@@ -78,6 +78,15 @@ body {
 
 .c-main__password {
   font-size: var(--fs-large);
+  background: var(--clr-gray-300);
+  color: var(--clr-gray-900);
+  border: none;
+  padding: 6px;
+}
+
+.c-main__password:focus {
+  outline: 1px solid var(--clr-gray-900);
+  outline-offset: 4px;
 }
 
 .c-main__button-icon {
