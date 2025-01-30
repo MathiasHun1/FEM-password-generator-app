@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="c-card">
+      <header class="c-header">
+        <h1>Password Generator</h1>
+      </header>
+
+      <main class="c-main">
+        <div class="c-main__output-wrapper">
+          <div class="c-main__password">P4$5W0rD!</div>
+          <div class="c-main__button-icon" role="button">
+            <img src="./assets/images/icon-copy.svg" alt="copy-button" />
+          </div>
+        </div>
+
+        <div class="c-main__divider"></div>
+
+        <div class="c-main__slider-text-wrapper">
+          <label for="slider" class="c-main__slider-label"
+            >Character Length
+          </label>
+          <output class="c-main__slider-value" id="slider-output"></output>
+        </div>
+
+        <input
+          type="range"
+          min="0"
+          max="20"
+          value="10"
+          id="slider-input"
+          class="c-main__slider"
+        />
+
+        <ul class="c-main__list">
+          <li class="c-main__list-item">
+            <input type="checkbox" name="" id="letters-upper" />
+            <label for="letters-upper">Include Uppercase Letters</label>
+          </li>
+          <li class="c-main__list-item">
+            <input type="checkbox" name="" id="letters-lower" />
+            <label for="letters-lower">Include Lowercase Letters</label>
+          </li>
+          <li class="c-main__list-item">
+            <input type="checkbox" name="" id="numbers" />
+            <label for="numbers">Include Numbers</label>
+          </li>
+          <li class="c-main__list-item">
+            <input type="checkbox" name="" id="symbols" />
+            <label for="symbols">Include Symbols</label>
+          </li>
+        </ul>
+
+        <div class="c-main__strenght-wrapper">
+          <p>STRENGHT</p>
+          <div class="c-main__strenght-inner-wrapper">
+            <p>MEDIUM</p>
+            <div class="c-main__strenght-icons">
+              <div class="c-main__strenght-icon" id="icon1"></div>
+              <div class="c-main__strenght-icon" id="icon2"></div>
+              <div class="c-main__strenght-icon" id="icon3"></div>
+              <div class="c-main__strenght-icon" id="icon4"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="c-main__submit-button">
+          <div class="c-main__submit-content">
+            <p>GENERATE</p>
+            <img src="./assets/images/icon-arrow-right.svg" alt="arrow icon" />
+          </div>
+        </button>
+      </main>
+    </div>
+  </body>
+  <script type="module" src="index.js"></script>
+</html>
