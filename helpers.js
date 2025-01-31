@@ -1,3 +1,5 @@
+import _ from 'https://cdn.skypack.dev/lodash';
+
 export const paswordCategories = {
   1: { text: 'TOO WEAK!', color: 'red' },
   2: { text: 'WEAK', color: 'orange' },
@@ -137,6 +139,7 @@ export function generatePassword(data) {
 
   //return password
   console.log(charArray);
+  console.log(_.shuffle(charArray));
 }
 
 function createGenFunctions() {
