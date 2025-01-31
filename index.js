@@ -59,5 +59,8 @@ generateButton.addEventListener('click', () => {
   // clearToDefault()
   // const generatedPass = generatePassword(getInputs());
   const userInputs = getInputs();
-  generatePassword(userInputs);
+  const password = generatePassword(userInputs);
+
+  inputField.value = password;
+  setStrenghtIndicator(categorizePassword(password));
 });

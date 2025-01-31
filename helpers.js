@@ -138,8 +138,8 @@ export function generatePassword(data) {
   }
 
   //return password
-  console.log(charArray);
-  console.log(_.shuffle(charArray));
+  const createdPass = _.shuffle(charArray).join('');
+  return createdPass;
 }
 
 function createGenFunctions() {
