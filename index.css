@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('./assets/fonts/JetBrainsMono-VariableFont_wght.ttf');
+}
 
 :root {
   --clr-gray-100: hsl(248 15 11);
@@ -90,9 +95,34 @@ body {
 }
 
 .c-main__button-icon {
-  width: 22px;
   background: var(--clr-gray-300);
   border: none;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  gap: 20px;
+  position: relative;
+}
+
+.c-main__copied {
+  font-size: var(--fs-small);
+  color: var(--clr-green-700);
+  line-height: 0px;
+  position: absolute;
+  left: -100%;
+  transform: translateX(-100%) translateY(2px);
+}
+
+.c-main__copied-image {
+  width: 24px;
+}
+
+.c-main__button-icon:hover {
+  cursor: pointer;
+}
+
+.c-main__button-icon:focus {
+  outline: 1px solid transparent;
 }
 
 .c-main__slider-text-wrapper {
@@ -235,6 +265,13 @@ input[type='checkbox']:checked {
   justify-content: center;
 }
 
+.c-main__submit-button:hover {
+  background: none;
+  border: 2px solid var(--clr-green-700);
+  color: var(--clr-green-700);
+  cursor: pointer;
+}
+
 .c-main__submit-content {
   position: relative;
   line-height: 1em;
@@ -271,4 +308,8 @@ input[type='checkbox']:checked {
 .default {
   background: none;
   border: 1px solid white;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,8 +1,8 @@
 import {
   categorizePassword,
-  paswordCategories,
   getInputs,
   generatePassword,
+  copyToClipboard,
 } from './helpers.js';
 import { setStrenghtIndicator } from './view.js';
 
@@ -63,4 +63,15 @@ generateButton.addEventListener('click', () => {
 
   inputField.value = password;
   setStrenghtIndicator(categorizePassword(password));
+});
+
+// Copy to clipboard
+const copyButton = document.querySelector('.c-main__button-icon');
+const copyText = document.querySelector('.c-main__copied');
+copyButton.addEventListener('click', () => {
+  copyToClipboard();
+  copyText.classList.remove('hidden');
+  setTimeout(() => {
+    copyText.classList.add('hidden');
+  }, 2000);
 });

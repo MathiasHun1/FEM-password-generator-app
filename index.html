@@ -30,8 +30,13 @@
             maxlength="20"
             placeholder="xc!aa2B"
           />
-          <div class="c-main__button-icon" role="button">
-            <img src="./assets/images/icon-copy.svg" alt="copy-button" />
+          <div class="c-main__button-icon" role="button" tabindex="0">
+            <p class="c-main__copied hidden">COPIED</p>
+            <img
+              class="c-main__copied-image"
+              src="./assets/images/icon-copy.svg"
+              alt="copy-button"
+            />
           </div>
         </div>
 
@@ -62,7 +67,7 @@
               data-id="lowerCase"
               checked
             />
-            <label for="letters-lower">Include Lowercase Letters</label>
+            <label for="lowerCase">Include Lowercase Letters</label>
           </li>
           <li class="c-main__list-item">
             <input
@@ -71,7 +76,7 @@
               id="upperCase"
               data-id="upperCase"
             />
-            <label for="letters-upper">Include Uppercase Letters</label>
+            <label for="upperCase">Include Uppercase Letters</label>
           </li>
           <li class="c-main__list-item">
             <input

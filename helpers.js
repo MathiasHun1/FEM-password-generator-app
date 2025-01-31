@@ -172,3 +172,9 @@ function createGenFunctions() {
 
   return genFunctions;
 }
+
+export function copyToClipboard() {
+  const text = document.getElementById('password-input').value;
+  window.navigator.clipboard.writeText(text);
+  console.log('copied: ', text);
+}
