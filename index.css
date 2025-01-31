@@ -323,6 +323,10 @@ input[type='checkbox']:checked {
     --fs-large: calc(24rem / 16);
   }
 
+  .c-header {
+    display: none;
+  }
+
   .c-main__strenght-inner-wrapper {
     width: min-content;
     line-height: 1em;
