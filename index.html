@@ -55,19 +55,40 @@
 
         <ul class="c-main__list">
           <li class="c-main__list-item">
-            <input type="checkbox" name="" id="letters-upper" />
-            <label for="letters-upper">Include Uppercase Letters</label>
-          </li>
-          <li class="c-main__list-item">
-            <input type="checkbox" name="" id="letters-lower" />
+            <input
+              type="checkbox"
+              name="options"
+              id="lowerCase"
+              data-id="lowerCase"
+              checked
+            />
             <label for="letters-lower">Include Lowercase Letters</label>
           </li>
           <li class="c-main__list-item">
-            <input type="checkbox" name="" id="numbers" />
+            <input
+              type="checkbox"
+              name="options"
+              id="upperCase"
+              data-id="upperCase"
+            />
+            <label for="letters-upper">Include Uppercase Letters</label>
+          </li>
+          <li class="c-main__list-item">
+            <input
+              type="checkbox"
+              name="options"
+              id="numbers"
+              data-id="numbers"
+            />
             <label for="numbers">Include Numbers</label>
           </li>
           <li class="c-main__list-item">
-            <input type="checkbox" name="" id="symbols" />
+            <input
+              type="checkbox"
+              name="options"
+              id="symbols"
+              data-id="symbols"
+            />
             <label for="symbols">Include Symbols</label>
           </li>
         </ul>
@@ -75,12 +96,12 @@
         <div class="c-main__strenght-wrapper">
           <p>STRENGHT</p>
           <div class="c-main__strenght-inner-wrapper">
-            <p>MEDIUM</p>
+            <p class="c-main__indicator-text">MEDIUM</p>
             <div class="c-main__strenght-icons">
-              <div class="c-main__strenght-icon" id="icon1"></div>
-              <div class="c-main__strenght-icon" id="icon2"></div>
-              <div class="c-main__strenght-icon" id="icon3"></div>
-              <div class="c-main__strenght-icon" id="icon4"></div>
+              <div class="c-main__strenght-icon default" data-id="1"></div>
+              <div class="c-main__strenght-icon default" data-id="2"></div>
+              <div class="c-main__strenght-icon default" data-id="3"></div>
+              <div class="c-main__strenght-icon default" data-id="4"></div>
             </div>
           </div>
         </div>
@@ -95,5 +116,6 @@
     </div>
   </body>
   <script type="module" src="helpers.js"></script>
+  <script type="module" src="view.js"></script>
   <script type="module" src="index.js"></script>
 </html>

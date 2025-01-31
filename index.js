@@ -1,4 +1,10 @@
-import { categorizePassword } from './helpers.js';
+import {
+  categorizePassword,
+  paswordCategories,
+  getInputs,
+  generatePassword,
+} from './helpers.js';
+import { setStrenghtIndicator } from './view.js';
 
 //  *****   Maunipulate the slider   *****  //
 const sliderInput = document.getElementById('slider-input');
@@ -17,21 +23,41 @@ sliderInput.addEventListener('input', (e) => {
     ((currentValue - min) / (max - min)) * 100
   }% 100%`;
 });
-//   ******************************   //
+
+// One of the checkboxes always have to be checked
+const checkboxes = document.querySelectorAll('input[name="options"]');
+
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', (e) => {
+    const checkedBoxes = document.querySelectorAll(
+      'input[name="options"]:checked'
+    );
+
+    if (checkedBoxes.length === 0) {
+      return (checkbox.checked = true);
+    }
+  });
+});
+
+// Manual password generation
 const inputField = document.getElementById('password-input');
 
-// password strenght criterions:
-// TOO WEAK: <= 4
-// WEAK: ( 5 <= pass < 8 AND 2type atl ) OR ( >= 8 AND 1type )
-// MEDIUM: (8 <= pass < 12 AND 3type atl) OR ( >= 12 AND 2type )
-// STRONG: (8 <= pass < 12 AND 4type) OR ( >= 12 AND 3type)
-
-// don't allow space to input
 inputField.addEventListener('input', (e) => {
   const inputText = e.target.value.trim();
-  e.target.value = inputText;
+  e.target.value = inputText; // don't allow spaces
 
   if (inputText) {
-    console.log(categorizePassword(inputText));
+    const result = categorizePassword(inputText);
+    setStrenghtIndicator(result);
   }
+});
+
+// Automatic password generation
+const generateButton = document.querySelector('.c-main__submit-button');
+
+generateButton.addEventListener('click', () => {
+  // clearToDefault()
+  // const generatedPass = generatePassword(getInputs());
+  const userInputs = getInputs();
+  generatePassword(userInputs);
 });
